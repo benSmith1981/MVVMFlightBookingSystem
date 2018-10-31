@@ -1,0 +1,862 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		42F81505CB815FC9107B43C5 /* Pods_RyanAirBookingsTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1D5E0EB30E2B2F5B7D2923C /* Pods_RyanAirBookingsTestTests.framework */; };
+		90F2D4ED21891C7B006581CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90F2D4EB21891C7B006581CC /* Main.storyboard */; };
+		90F2D4EF21891C7C006581CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90F2D4EE21891C7C006581CC /* Assets.xcassets */; };
+		90F2D4F221891C7C006581CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90F2D4F021891C7C006581CC /* LaunchScreen.storyboard */; };
+		90F2D4FD21891C7D006581CC /* RyanAirBookingsTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D4FC21891C7D006581CC /* RyanAirBookingsTestTests.swift */; };
+		90F2D50821891C7D006581CC /* RyanAirBookingsTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D50721891C7D006581CC /* RyanAirBookingsTestUITests.swift */; };
+		90F2D52221891C96006581CC /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D51621891C95006581CC /* Results.swift */; };
+		90F2D52521891C96006581CC /* DataAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D51A21891C95006581CC /* DataAccess.swift */; };
+		90F2D52621891C96006581CC /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D51B21891C95006581CC /* Config.swift */; };
+		90F2D52721891C96006581CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D51C21891C95006581CC /* AppDelegate.swift */; };
+		90F2D52821891C96006581CC /* ResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D51D21891C95006581CC /* ResultsTableViewController.swift */; };
+		90F2D52921891C96006581CC /* TripTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D51E21891C95006581CC /* TripTableViewController.swift */; };
+		90F2D52A21891C96006581CC /* ResultsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D51F21891C95006581CC /* ResultsListViewModel.swift */; };
+		90F2D52B21891C96006581CC /* TripViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D52021891C96006581CC /* TripViewModel.swift */; };
+		90F2D52E21891DF0006581CC /* BindingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D52D21891DF0006581CC /* BindingTextField.swift */; };
+		90F2D53021893155006581CC /* Stations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D52F21893155006581CC /* Stations.swift */; };
+		90F2D53221893CAD006581CC /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D53121893CAD006581CC /* R.generated.swift */; };
+		ADC962B339BEEE6B33553E46 /* Pods_RyanAirBookingsTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 883839220D05C62824F118F6 /* Pods_RyanAirBookingsTestUITests.framework */; };
+		C30F99D610B42F5E9D37226F /* Pods_RyanAirBookingsTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E71B23793028EB11A15A826 /* Pods_RyanAirBookingsTest.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		90F2D4F921891C7D006581CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 90F2D4DC21891C7B006581CC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 90F2D4E321891C7B006581CC;
+			remoteInfo = RyanAirBookingsTest;
+		};
+		90F2D50421891C7D006581CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 90F2D4DC21891C7B006581CC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 90F2D4E321891C7B006581CC;
+			remoteInfo = RyanAirBookingsTest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		008AF24F52EE921C573893E1 /* Pods-RyanAirBookingsTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RyanAirBookingsTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-RyanAirBookingsTest/Pods-RyanAirBookingsTest.release.xcconfig"; sourceTree = "<group>"; };
+		22F90C2DAD6398A446B27857 /* Pods-RyanAirBookingsTestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RyanAirBookingsTestUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RyanAirBookingsTestUITests/Pods-RyanAirBookingsTestUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		40FBFF4C9D49DB1FB003DEE0 /* Pods-RyanAirBookingsTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RyanAirBookingsTestUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RyanAirBookingsTestUITests/Pods-RyanAirBookingsTestUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4E71B23793028EB11A15A826 /* Pods_RyanAirBookingsTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RyanAirBookingsTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		81E2A3BA3836D52737BCCDC7 /* Pods-RyanAirBookingsTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RyanAirBookingsTestTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RyanAirBookingsTestTests/Pods-RyanAirBookingsTestTests.debug.xcconfig"; sourceTree = "<group>"; };
+		883839220D05C62824F118F6 /* Pods_RyanAirBookingsTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RyanAirBookingsTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		90F2D4E421891C7B006581CC /* RyanAirBookingsTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RyanAirBookingsTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		90F2D4EC21891C7B006581CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		90F2D4EE21891C7C006581CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		90F2D4F121891C7C006581CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		90F2D4F321891C7C006581CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90F2D4F821891C7D006581CC /* RyanAirBookingsTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RyanAirBookingsTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		90F2D4FC21891C7D006581CC /* RyanAirBookingsTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyanAirBookingsTestTests.swift; sourceTree = "<group>"; };
+		90F2D4FE21891C7D006581CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90F2D50321891C7D006581CC /* RyanAirBookingsTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RyanAirBookingsTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		90F2D50721891C7D006581CC /* RyanAirBookingsTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyanAirBookingsTestUITests.swift; sourceTree = "<group>"; };
+		90F2D50921891C7D006581CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90F2D51621891C95006581CC /* Results.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
+		90F2D51A21891C95006581CC /* DataAccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataAccess.swift; sourceTree = "<group>"; };
+		90F2D51B21891C95006581CC /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		90F2D51C21891C95006581CC /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../../RyanAirbookingApp/RyanAirbookingApp/AppDelegate.swift; sourceTree = "<group>"; };
+		90F2D51D21891C95006581CC /* ResultsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsTableViewController.swift; sourceTree = "<group>"; };
+		90F2D51E21891C95006581CC /* TripTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripTableViewController.swift; sourceTree = "<group>"; };
+		90F2D51F21891C95006581CC /* ResultsListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsListViewModel.swift; sourceTree = "<group>"; };
+		90F2D52021891C96006581CC /* TripViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripViewModel.swift; sourceTree = "<group>"; };
+		90F2D52D21891DF0006581CC /* BindingTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BindingTextField.swift; sourceTree = "<group>"; };
+		90F2D52F21893155006581CC /* Stations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stations.swift; sourceTree = "<group>"; };
+		90F2D53121893CAD006581CC /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		C1D5E0EB30E2B2F5B7D2923C /* Pods_RyanAirBookingsTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RyanAirBookingsTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E375237BDD5C605B4397F8E0 /* Pods-RyanAirBookingsTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RyanAirBookingsTestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RyanAirBookingsTestTests/Pods-RyanAirBookingsTestTests.release.xcconfig"; sourceTree = "<group>"; };
+		FEC3CFB9CB68D9AA1EE6E861 /* Pods-RyanAirBookingsTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RyanAirBookingsTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RyanAirBookingsTest/Pods-RyanAirBookingsTest.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		90F2D4E121891C7B006581CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C30F99D610B42F5E9D37226F /* Pods_RyanAirBookingsTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90F2D4F521891C7D006581CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42F81505CB815FC9107B43C5 /* Pods_RyanAirBookingsTestTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90F2D50021891C7D006581CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADC962B339BEEE6B33553E46 /* Pods_RyanAirBookingsTestUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		90F2D4DB21891C7B006581CC = {
+			isa = PBXGroup;
+			children = (
+				90F2D4E621891C7B006581CC /* RyanAirBookingsTest */,
+				90F2D4FB21891C7D006581CC /* RyanAirBookingsTestTests */,
+				90F2D50621891C7D006581CC /* RyanAirBookingsTestUITests */,
+				90F2D4E521891C7B006581CC /* Products */,
+				EF0C0134732E72430877C25D /* Pods */,
+				D6F3145EA9786C46442811AD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		90F2D4E521891C7B006581CC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				90F2D4E421891C7B006581CC /* RyanAirBookingsTest.app */,
+				90F2D4F821891C7D006581CC /* RyanAirBookingsTestTests.xctest */,
+				90F2D50321891C7D006581CC /* RyanAirBookingsTestUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		90F2D4E621891C7B006581CC /* RyanAirBookingsTest */ = {
+			isa = PBXGroup;
+			children = (
+				90F2D51D21891C95006581CC /* ResultsTableViewController.swift */,
+				90F2D51F21891C95006581CC /* ResultsListViewModel.swift */,
+				90F2D51E21891C95006581CC /* TripTableViewController.swift */,
+				90F2D52021891C96006581CC /* TripViewModel.swift */,
+				90F2D52D21891DF0006581CC /* BindingTextField.swift */,
+				90F2D51C21891C95006581CC /* AppDelegate.swift */,
+				90F2D51921891C95006581CC /* DataLayer */,
+				90F2D4EB21891C7B006581CC /* Main.storyboard */,
+				90F2D4EE21891C7C006581CC /* Assets.xcassets */,
+				90F2D4F021891C7C006581CC /* LaunchScreen.storyboard */,
+				90F2D4F321891C7C006581CC /* Info.plist */,
+				90F2D53121893CAD006581CC /* R.generated.swift */,
+			);
+			path = RyanAirBookingsTest;
+			sourceTree = "<group>";
+		};
+		90F2D4FB21891C7D006581CC /* RyanAirBookingsTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				90F2D4FC21891C7D006581CC /* RyanAirBookingsTestTests.swift */,
+				90F2D4FE21891C7D006581CC /* Info.plist */,
+			);
+			path = RyanAirBookingsTestTests;
+			sourceTree = "<group>";
+		};
+		90F2D50621891C7D006581CC /* RyanAirBookingsTestUITests */ = {
+			isa = PBXGroup;
+			children = (
+				90F2D50721891C7D006581CC /* RyanAirBookingsTestUITests.swift */,
+				90F2D50921891C7D006581CC /* Info.plist */,
+			);
+			path = RyanAirBookingsTestUITests;
+			sourceTree = "<group>";
+		};
+		90F2D51921891C95006581CC /* DataLayer */ = {
+			isa = PBXGroup;
+			children = (
+				90F2D51A21891C95006581CC /* DataAccess.swift */,
+				90F2D51621891C95006581CC /* Results.swift */,
+				90F2D52F21893155006581CC /* Stations.swift */,
+				90F2D51B21891C95006581CC /* Config.swift */,
+			);
+			path = DataLayer;
+			sourceTree = "<group>";
+		};
+		D6F3145EA9786C46442811AD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4E71B23793028EB11A15A826 /* Pods_RyanAirBookingsTest.framework */,
+				C1D5E0EB30E2B2F5B7D2923C /* Pods_RyanAirBookingsTestTests.framework */,
+				883839220D05C62824F118F6 /* Pods_RyanAirBookingsTestUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EF0C0134732E72430877C25D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FEC3CFB9CB68D9AA1EE6E861 /* Pods-RyanAirBookingsTest.debug.xcconfig */,
+				008AF24F52EE921C573893E1 /* Pods-RyanAirBookingsTest.release.xcconfig */,
+				81E2A3BA3836D52737BCCDC7 /* Pods-RyanAirBookingsTestTests.debug.xcconfig */,
+				E375237BDD5C605B4397F8E0 /* Pods-RyanAirBookingsTestTests.release.xcconfig */,
+				22F90C2DAD6398A446B27857 /* Pods-RyanAirBookingsTestUITests.debug.xcconfig */,
+				40FBFF4C9D49DB1FB003DEE0 /* Pods-RyanAirBookingsTestUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		90F2D4E321891C7B006581CC /* RyanAirBookingsTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 90F2D50C21891C7D006581CC /* Build configuration list for PBXNativeTarget "RyanAirBookingsTest" */;
+			buildPhases = (
+				A504B97BBF6BDD2D66DC5350 /* [CP] Check Pods Manifest.lock */,
+				90F2D4E021891C7B006581CC /* Sources */,
+				90F2D4E121891C7B006581CC /* Frameworks */,
+				90F2D4E221891C7B006581CC /* Resources */,
+				84B5F642B8D7B6BCB3FDCD8A /* [CP] Embed Pods Frameworks */,
+				90490474F073FFB3CAFCBF59 /* [CP] Copy Pods Resources */,
+				90F2D52C21891D84006581CC /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RyanAirBookingsTest;
+			productName = RyanAirBookingsTest;
+			productReference = 90F2D4E421891C7B006581CC /* RyanAirBookingsTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		90F2D4F721891C7D006581CC /* RyanAirBookingsTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 90F2D50F21891C7D006581CC /* Build configuration list for PBXNativeTarget "RyanAirBookingsTestTests" */;
+			buildPhases = (
+				6D57F91AEB9538427B815EF0 /* [CP] Check Pods Manifest.lock */,
+				90F2D4F421891C7D006581CC /* Sources */,
+				90F2D4F521891C7D006581CC /* Frameworks */,
+				90F2D4F621891C7D006581CC /* Resources */,
+				3E4FD4457DCB0AC6914A1523 /* [CP] Embed Pods Frameworks */,
+				C249873CA5D4A7D3A5E328BC /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				90F2D4FA21891C7D006581CC /* PBXTargetDependency */,
+			);
+			name = RyanAirBookingsTestTests;
+			productName = RyanAirBookingsTestTests;
+			productReference = 90F2D4F821891C7D006581CC /* RyanAirBookingsTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		90F2D50221891C7D006581CC /* RyanAirBookingsTestUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 90F2D51221891C7D006581CC /* Build configuration list for PBXNativeTarget "RyanAirBookingsTestUITests" */;
+			buildPhases = (
+				C80245F6A86AECCB92DA9D26 /* [CP] Check Pods Manifest.lock */,
+				90F2D4FF21891C7D006581CC /* Sources */,
+				90F2D50021891C7D006581CC /* Frameworks */,
+				90F2D50121891C7D006581CC /* Resources */,
+				301E2BB948860235F2D74674 /* [CP] Embed Pods Frameworks */,
+				CE1F11CC9C898B3B6A83EADD /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				90F2D50521891C7D006581CC /* PBXTargetDependency */,
+			);
+			name = RyanAirBookingsTestUITests;
+			productName = RyanAirBookingsTestUITests;
+			productReference = 90F2D50321891C7D006581CC /* RyanAirBookingsTestUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		90F2D4DC21891C7B006581CC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "Ben Smith";
+				TargetAttributes = {
+					90F2D4E321891C7B006581CC = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					90F2D4F721891C7D006581CC = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 90F2D4E321891C7B006581CC;
+					};
+					90F2D50221891C7D006581CC = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 90F2D4E321891C7B006581CC;
+					};
+				};
+			};
+			buildConfigurationList = 90F2D4DF21891C7B006581CC /* Build configuration list for PBXProject "RyanAirBookingsTest" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 90F2D4DB21891C7B006581CC;
+			productRefGroup = 90F2D4E521891C7B006581CC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				90F2D4E321891C7B006581CC /* RyanAirBookingsTest */,
+				90F2D4F721891C7D006581CC /* RyanAirBookingsTestTests */,
+				90F2D50221891C7D006581CC /* RyanAirBookingsTestUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		90F2D4E221891C7B006581CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90F2D4F221891C7C006581CC /* LaunchScreen.storyboard in Resources */,
+				90F2D4EF21891C7C006581CC /* Assets.xcassets in Resources */,
+				90F2D4ED21891C7B006581CC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90F2D4F621891C7D006581CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90F2D50121891C7D006581CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		301E2BB948860235F2D74674 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RyanAirBookingsTestUITests/Pods-RyanAirBookingsTestUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3E4FD4457DCB0AC6914A1523 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RyanAirBookingsTestTests/Pods-RyanAirBookingsTestTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6D57F91AEB9538427B815EF0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RyanAirBookingsTestTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		84B5F642B8D7B6BCB3FDCD8A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RyanAirBookingsTest/Pods-RyanAirBookingsTest-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RyanAirBookingsTest/Pods-RyanAirBookingsTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		90490474F073FFB3CAFCBF59 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RyanAirBookingsTest/Pods-RyanAirBookingsTest-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		90F2D52C21891D84006581CC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" \"$SRCROOT\"  \n\n";
+		};
+		A504B97BBF6BDD2D66DC5350 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RyanAirBookingsTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C249873CA5D4A7D3A5E328BC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RyanAirBookingsTestTests/Pods-RyanAirBookingsTestTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C80245F6A86AECCB92DA9D26 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RyanAirBookingsTestUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE1F11CC9C898B3B6A83EADD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RyanAirBookingsTestUITests/Pods-RyanAirBookingsTestUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		90F2D4E021891C7B006581CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90F2D52921891C96006581CC /* TripTableViewController.swift in Sources */,
+				90F2D52E21891DF0006581CC /* BindingTextField.swift in Sources */,
+				90F2D52721891C96006581CC /* AppDelegate.swift in Sources */,
+				90F2D52821891C96006581CC /* ResultsTableViewController.swift in Sources */,
+				90F2D52221891C96006581CC /* Results.swift in Sources */,
+				90F2D52B21891C96006581CC /* TripViewModel.swift in Sources */,
+				90F2D52621891C96006581CC /* Config.swift in Sources */,
+				90F2D52521891C96006581CC /* DataAccess.swift in Sources */,
+				90F2D53021893155006581CC /* Stations.swift in Sources */,
+				90F2D53221893CAD006581CC /* R.generated.swift in Sources */,
+				90F2D52A21891C96006581CC /* ResultsListViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90F2D4F421891C7D006581CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90F2D4FD21891C7D006581CC /* RyanAirBookingsTestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90F2D4FF21891C7D006581CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90F2D50821891C7D006581CC /* RyanAirBookingsTestUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		90F2D4FA21891C7D006581CC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 90F2D4E321891C7B006581CC /* RyanAirBookingsTest */;
+			targetProxy = 90F2D4F921891C7D006581CC /* PBXContainerItemProxy */;
+		};
+		90F2D50521891C7D006581CC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 90F2D4E321891C7B006581CC /* RyanAirBookingsTest */;
+			targetProxy = 90F2D50421891C7D006581CC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		90F2D4EB21891C7B006581CC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				90F2D4EC21891C7B006581CC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		90F2D4F021891C7C006581CC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				90F2D4F121891C7C006581CC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		90F2D50A21891C7D006581CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		90F2D50B21891C7D006581CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		90F2D50D21891C7D006581CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEC3CFB9CB68D9AA1EE6E861 /* Pods-RyanAirBookingsTest.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CWK29L7ZPT;
+				INFOPLIST_FILE = RyanAirBookingsTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bensmithinc..RyanAirBookingsTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		90F2D50E21891C7D006581CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 008AF24F52EE921C573893E1 /* Pods-RyanAirBookingsTest.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CWK29L7ZPT;
+				INFOPLIST_FILE = RyanAirBookingsTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bensmithinc..RyanAirBookingsTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		90F2D51021891C7D006581CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81E2A3BA3836D52737BCCDC7 /* Pods-RyanAirBookingsTestTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CWK29L7ZPT;
+				INFOPLIST_FILE = RyanAirBookingsTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bensmithinc..RyanAirBookingsTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RyanAirBookingsTest.app/RyanAirBookingsTest";
+			};
+			name = Debug;
+		};
+		90F2D51121891C7D006581CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E375237BDD5C605B4397F8E0 /* Pods-RyanAirBookingsTestTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CWK29L7ZPT;
+				INFOPLIST_FILE = RyanAirBookingsTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bensmithinc..RyanAirBookingsTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RyanAirBookingsTest.app/RyanAirBookingsTest";
+			};
+			name = Release;
+		};
+		90F2D51321891C7D006581CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22F90C2DAD6398A446B27857 /* Pods-RyanAirBookingsTestUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CWK29L7ZPT;
+				INFOPLIST_FILE = RyanAirBookingsTestUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bensmithinc..RyanAirBookingsTestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RyanAirBookingsTest;
+			};
+			name = Debug;
+		};
+		90F2D51421891C7D006581CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40FBFF4C9D49DB1FB003DEE0 /* Pods-RyanAirBookingsTestUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CWK29L7ZPT;
+				INFOPLIST_FILE = RyanAirBookingsTestUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bensmithinc..RyanAirBookingsTestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RyanAirBookingsTest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		90F2D4DF21891C7B006581CC /* Build configuration list for PBXProject "RyanAirBookingsTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90F2D50A21891C7D006581CC /* Debug */,
+				90F2D50B21891C7D006581CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		90F2D50C21891C7D006581CC /* Build configuration list for PBXNativeTarget "RyanAirBookingsTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90F2D50D21891C7D006581CC /* Debug */,
+				90F2D50E21891C7D006581CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		90F2D50F21891C7D006581CC /* Build configuration list for PBXNativeTarget "RyanAirBookingsTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90F2D51021891C7D006581CC /* Debug */,
+				90F2D51121891C7D006581CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		90F2D51221891C7D006581CC /* Build configuration list for PBXNativeTarget "RyanAirBookingsTestUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90F2D51321891C7D006581CC /* Debug */,
+				90F2D51421891C7D006581CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 90F2D4DC21891C7B006581CC /* Project object */;
+}
