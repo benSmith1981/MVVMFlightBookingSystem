@@ -7,8 +7,33 @@
 //
 
 import Foundation
+
 struct Results: Codable {
-    var date: String?
+    var trips: [Trips]
+}
+
+struct Trips: Codable {
+    var origin: String?
+    var destination: String?
+    var dates: [Dates]?
+}
+
+struct Dates: Codable {
+    
+    var dateOut: String?
+    var flights: [Flights]?
+}
+
+struct Flights: Codable {
     var flightNumber: String?
-    var regularFare: Double?
+    var regularFare: RegularFare?
+}
+
+struct RegularFare: Codable {
+    var fares: [Fares]
+}
+struct Fares: Codable {
+    var type: String?
+    var amount: Double
+    var publishedFare: Double
 }

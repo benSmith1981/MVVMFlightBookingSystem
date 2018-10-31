@@ -21,8 +21,17 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.file` struct is generated, and contains static references to 0 files.
+  /// This `R.file` struct is generated, and contains static references to 1 files.
   struct file {
+    /// Resource file `trip.json`.
+    static let tripJson = Rswift.FileResource(bundle: R.hostingBundle, name: "trip", pathExtension: "json")
+    
+    /// `bundle.url(forResource: "trip", withExtension: "json")`
+    static func tripJson(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.tripJson
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+    
     fileprivate init() {}
   }
   
@@ -52,15 +61,15 @@ struct R: Rswift.Validatable {
   /// This `R.segue` struct is generated, and contains static references to 1 view controllers.
   struct segue {
     /// This struct is generated for `TripTableViewController`, and contains static references to 1 segues.
-    struct tripTableViewController {
+    struct ryanAirBookingsTestTripTableViewController {
       /// Segue identifier `showResults`.
-      static let showResults: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, TripTableViewController, RyanAirBookingsTest.ResultsTableViewController> = Rswift.StoryboardSegueIdentifier(identifier: "showResults")
+      static let showResults: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, RyanAirBookingsTest.TripTableViewController, RyanAirBookingsTest.ResultsTableViewController> = Rswift.StoryboardSegueIdentifier(identifier: "showResults")
       
       /// Optionally returns a typed version of segue `showResults`.
       /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
       /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
-      static func showResults(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, TripTableViewController, RyanAirBookingsTest.ResultsTableViewController>? {
-        return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.tripTableViewController.showResults, segue: segue)
+      static func showResults(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, RyanAirBookingsTest.TripTableViewController, RyanAirBookingsTest.ResultsTableViewController>? {
+        return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.ryanAirBookingsTestTripTableViewController.showResults, segue: segue)
       }
       
       fileprivate init() {}

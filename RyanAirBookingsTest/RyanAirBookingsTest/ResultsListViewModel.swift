@@ -8,28 +8,47 @@
 
 import Foundation
 
+
+
 //Represenets everything happening in the Results screen
 class ResultsListViewModels {
     var resultViewModels: [ResultViewModel] = [ResultViewModel]()
-    private var dataAccess: DataAccess
     private var tripviewModel: TripViewModel
     
-    init(dataAccess: DataAccess, tripviewModel: TripViewModel) {
-        self.dataAccess = dataAccess
+    init(tripviewModel: TripViewModel) {
         self.tripviewModel = tripviewModel
+
     }
     
-    private func search(tripviewModel: TripViewModel){
+    func search(tripviewModel: TripViewModel, onCompletion: @escaping (ResultsListViewModels, String) -> Void) {
         //search and get results
-        let results = dataAccess.getSearchResults(tripviewModel: self.tripviewModel) //Returns and array of RESULTS objects
+        DataAccess.shared.getSearchResults(tripviewModel: self.tripviewModel, success: { (trips, data) in
+            trips.forEach({ trip in
+                trip.dates?.forEach({ (date) in
+                    let dateOut = date.dateOut
+                    date.flights?.forEach({ (flight) in
+                        let flightNumber = flight.flightNumber
+                        let fare = flight.regularFare?.fares[0].publishedFare
+                        let resultViewModel = ResultViewModel.init(date: dateOut ?? "",
+                                                                   flightNumber: flightNumber ?? "",
+                                                                   regularFare: fare ?? 0.0)
+                        self.resultViewModels.append(resultViewModel)
+//                        flight.regularFare?.fares.forEach({ (fare) in
+//                            let fare = fare.publishedFare
+//                        })
+                    })
+                })
+                
+            })
+            onCompletion(self, "Succcess")
+        }) { (message) in
+            print(message)
+            onCompletion(self, message)
+
+        } //Returns and array of RESULTS objects
         
         //Then put results int view models ready for the view
         //keep view model as plain and dumb as possible...
-        self.resultViewModels = results.compactMap({ result in
-            return ResultViewModel.init(date: result.date!,
-                                        flightNumber: result.flightNumber!,
-                                        regularFare: result.regularFare!)
-        })
     }
 }
 

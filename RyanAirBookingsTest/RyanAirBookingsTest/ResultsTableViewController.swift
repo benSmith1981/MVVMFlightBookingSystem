@@ -34,7 +34,7 @@ class ResultsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.cell.identifier, for: indexPath)
         let resultViewModel = self.resultsListViewModel.resultViewModels[indexPath.row]
-        cell.textLabel?.text = "\(resultViewModel.flightNumber), \(resultViewModel.date), \(resultViewModel.regularFare)"
+        cell.textLabel?.text = "\(resultViewModel.flightNumber ?? "Unknown"), \(resultViewModel.date ?? "Unknown"), \(resultViewModel.regularFare ?? 0)"
         return cell
     }
     

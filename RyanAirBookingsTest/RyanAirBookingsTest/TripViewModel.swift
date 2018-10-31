@@ -31,8 +31,26 @@ class Dynamic<T> {
     
 }
 
+struct ValidationError {
+    var validationName: String
+    var message: String
+}
+protocol ViewModel {
+    var validationError: [ValidationError] { get set}
+    var isValid: Bool { mutating get}
+}
+
 //Represenets everything happening in the triptable screen
-class TripViewModel {
+class TripViewModel:ViewModel {
+    var validationError: [ValidationError] = [ValidationError]()
+    var isValid: Bool {
+        get {
+            self.validationError = [ValidationError]()
+            self.validate()
+            return validationError.count == 0 ? true : false
+        }
+    }
+
     var origin: Dynamic<String>!
     var destination: Dynamic<String>!
     var departure: Dynamic<String>!
@@ -49,4 +67,30 @@ class TripViewModel {
         self.children = Dynamic<String>(children)
     }
 
+}
+
+extension TripViewModel {
+    private func validate() {
+        if let empty = origin.value?.isEmpty, empty == true {
+            self.validationError.append(ValidationError.init(validationName: "Origin", message: "Provide Start Destination"))
+        }
+        
+        if let empty = destination.value?.isEmpty, empty == true {
+            self.validationError.append(ValidationError.init(validationName: "destination", message: "Provide End Destination"))
+        }
+        
+        if let empty = departure.value?.isEmpty, empty == true {
+            self.validationError.append(ValidationError.init(validationName: "departure", message: "Provide Departure Date"))
+        }
+        if let teenEmpty = teen.value?.isEmpty,
+            let adultEmpty = adults.value?.isEmpty,
+            let childrenEmpty = children.value?.isEmpty,
+            adultEmpty == true && childrenEmpty == true && teenEmpty == true{
+            self.validationError.append(ValidationError.init(validationName: "No Passengers", message: "You must provide atleast one passenger"))
+        }
+        
+//        if let empty = adults.value?.isEmpty, empty == true {
+//            self.validationError.append(ValidationError.init(validationName: "departure", message: "Provide Departure Date"))
+//        }
+    }
 }

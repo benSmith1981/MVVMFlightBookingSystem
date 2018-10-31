@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		42F81505CB815FC9107B43C5 /* Pods_RyanAirBookingsTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1D5E0EB30E2B2F5B7D2923C /* Pods_RyanAirBookingsTestTests.framework */; };
-		90F2D4ED21891C7B006581CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90F2D4EB21891C7B006581CC /* Main.storyboard */; };
+		904A72CA218A496900BAB983 /* trip.json in Resources */ = {isa = PBXBuildFile; fileRef = 904A72C9218A496900BAB983 /* trip.json */; };
 		90F2D4EF21891C7C006581CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90F2D4EE21891C7C006581CC /* Assets.xcassets */; };
 		90F2D4F221891C7C006581CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90F2D4F021891C7C006581CC /* LaunchScreen.storyboard */; };
 		90F2D4FD21891C7D006581CC /* RyanAirBookingsTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D4FC21891C7D006581CC /* RyanAirBookingsTestTests.swift */; };
@@ -16,14 +16,16 @@
 		90F2D52221891C96006581CC /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D51621891C95006581CC /* Results.swift */; };
 		90F2D52521891C96006581CC /* DataAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D51A21891C95006581CC /* DataAccess.swift */; };
 		90F2D52621891C96006581CC /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D51B21891C95006581CC /* Config.swift */; };
-		90F2D52721891C96006581CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D51C21891C95006581CC /* AppDelegate.swift */; };
 		90F2D52821891C96006581CC /* ResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D51D21891C95006581CC /* ResultsTableViewController.swift */; };
-		90F2D52921891C96006581CC /* TripTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D51E21891C95006581CC /* TripTableViewController.swift */; };
 		90F2D52A21891C96006581CC /* ResultsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D51F21891C95006581CC /* ResultsListViewModel.swift */; };
 		90F2D52B21891C96006581CC /* TripViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D52021891C96006581CC /* TripViewModel.swift */; };
 		90F2D52E21891DF0006581CC /* BindingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D52D21891DF0006581CC /* BindingTextField.swift */; };
 		90F2D53021893155006581CC /* Stations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D52F21893155006581CC /* Stations.swift */; };
 		90F2D53221893CAD006581CC /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D53121893CAD006581CC /* R.generated.swift */; };
+		90F2D53421894C35006581CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D53321894C35006581CC /* AppDelegate.swift */; };
+		90F2D5362189DD9D006581CC /* StationViewListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D5352189DD9D006581CC /* StationViewListModel.swift */; };
+		90F2D537218A35AC006581CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90F2D4EB21891C7B006581CC /* Main.storyboard */; };
+		90F2D539218A36B8006581CC /* TripTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D538218A36B8006581CC /* TripTableViewController.swift */; };
 		ADC962B339BEEE6B33553E46 /* Pods_RyanAirBookingsTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 883839220D05C62824F118F6 /* Pods_RyanAirBookingsTestUITests.framework */; };
 		C30F99D610B42F5E9D37226F /* Pods_RyanAirBookingsTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E71B23793028EB11A15A826 /* Pods_RyanAirBookingsTest.framework */; };
 /* End PBXBuildFile section */
@@ -52,6 +54,7 @@
 		4E71B23793028EB11A15A826 /* Pods_RyanAirBookingsTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RyanAirBookingsTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81E2A3BA3836D52737BCCDC7 /* Pods-RyanAirBookingsTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RyanAirBookingsTestTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RyanAirBookingsTestTests/Pods-RyanAirBookingsTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		883839220D05C62824F118F6 /* Pods_RyanAirBookingsTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RyanAirBookingsTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		904A72C9218A496900BAB983 /* trip.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = trip.json; sourceTree = "<group>"; };
 		90F2D4E421891C7B006581CC /* RyanAirBookingsTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RyanAirBookingsTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90F2D4EC21891C7B006581CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		90F2D4EE21891C7C006581CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -66,14 +69,15 @@
 		90F2D51621891C95006581CC /* Results.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
 		90F2D51A21891C95006581CC /* DataAccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataAccess.swift; sourceTree = "<group>"; };
 		90F2D51B21891C95006581CC /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
-		90F2D51C21891C95006581CC /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../../RyanAirbookingApp/RyanAirbookingApp/AppDelegate.swift; sourceTree = "<group>"; };
 		90F2D51D21891C95006581CC /* ResultsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsTableViewController.swift; sourceTree = "<group>"; };
-		90F2D51E21891C95006581CC /* TripTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripTableViewController.swift; sourceTree = "<group>"; };
 		90F2D51F21891C95006581CC /* ResultsListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsListViewModel.swift; sourceTree = "<group>"; };
 		90F2D52021891C96006581CC /* TripViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripViewModel.swift; sourceTree = "<group>"; };
 		90F2D52D21891DF0006581CC /* BindingTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BindingTextField.swift; sourceTree = "<group>"; };
 		90F2D52F21893155006581CC /* Stations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stations.swift; sourceTree = "<group>"; };
 		90F2D53121893CAD006581CC /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		90F2D53321894C35006581CC /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		90F2D5352189DD9D006581CC /* StationViewListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationViewListModel.swift; sourceTree = "<group>"; };
+		90F2D538218A36B8006581CC /* TripTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripTableViewController.swift; sourceTree = "<group>"; };
 		C1D5E0EB30E2B2F5B7D2923C /* Pods_RyanAirBookingsTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RyanAirBookingsTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E375237BDD5C605B4397F8E0 /* Pods-RyanAirBookingsTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RyanAirBookingsTestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RyanAirBookingsTestTests/Pods-RyanAirBookingsTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		FEC3CFB9CB68D9AA1EE6E861 /* Pods-RyanAirBookingsTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RyanAirBookingsTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RyanAirBookingsTest/Pods-RyanAirBookingsTest.debug.xcconfig"; sourceTree = "<group>"; };
@@ -134,16 +138,18 @@
 			children = (
 				90F2D51D21891C95006581CC /* ResultsTableViewController.swift */,
 				90F2D51F21891C95006581CC /* ResultsListViewModel.swift */,
-				90F2D51E21891C95006581CC /* TripTableViewController.swift */,
 				90F2D52021891C96006581CC /* TripViewModel.swift */,
+				90F2D538218A36B8006581CC /* TripTableViewController.swift */,
+				90F2D5352189DD9D006581CC /* StationViewListModel.swift */,
 				90F2D52D21891DF0006581CC /* BindingTextField.swift */,
-				90F2D51C21891C95006581CC /* AppDelegate.swift */,
+				90F2D53321894C35006581CC /* AppDelegate.swift */,
 				90F2D51921891C95006581CC /* DataLayer */,
 				90F2D4EB21891C7B006581CC /* Main.storyboard */,
 				90F2D4EE21891C7C006581CC /* Assets.xcassets */,
 				90F2D4F021891C7C006581CC /* LaunchScreen.storyboard */,
 				90F2D4F321891C7C006581CC /* Info.plist */,
 				90F2D53121893CAD006581CC /* R.generated.swift */,
+				904A72C9218A496900BAB983 /* trip.json */,
 			);
 			path = RyanAirBookingsTest;
 			sourceTree = "<group>";
@@ -314,9 +320,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				904A72CA218A496900BAB983 /* trip.json in Resources */,
+				90F2D537218A35AC006581CC /* Main.storyboard in Resources */,
 				90F2D4F221891C7C006581CC /* LaunchScreen.storyboard in Resources */,
 				90F2D4EF21891C7C006581CC /* Assets.xcassets in Resources */,
-				90F2D4ED21891C7B006581CC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,9 +519,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90F2D52921891C96006581CC /* TripTableViewController.swift in Sources */,
+				90F2D53421894C35006581CC /* AppDelegate.swift in Sources */,
 				90F2D52E21891DF0006581CC /* BindingTextField.swift in Sources */,
-				90F2D52721891C96006581CC /* AppDelegate.swift in Sources */,
+				90F2D539218A36B8006581CC /* TripTableViewController.swift in Sources */,
+				90F2D5362189DD9D006581CC /* StationViewListModel.swift in Sources */,
 				90F2D52821891C96006581CC /* ResultsTableViewController.swift in Sources */,
 				90F2D52221891C96006581CC /* Results.swift in Sources */,
 				90F2D52B21891C96006581CC /* TripViewModel.swift in Sources */,

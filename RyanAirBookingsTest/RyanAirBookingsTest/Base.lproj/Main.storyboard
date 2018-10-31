@@ -36,10 +36,10 @@
             </objects>
             <point key="canvasLocation" x="2668" y="563"/>
         </scene>
-        <!--Registration-->
+        <!--Trip Search-->
         <scene sceneID="MFT-3F-2Vc">
             <objects>
-                <tableViewController id="zHi-DO-7fg" customClass="TripTableViewController" customModule="RyanAirBookingsTest" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="zHi-DO-7fg" userLabel="Trip Search" customClass="TripTableViewController" customModule="RyanAirBookingsTest" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="0qQ-vr-XhQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -113,7 +113,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                 </textField>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZv-pJ-P7W">
                                                     <rect key="frame" x="336" y="7" width="30" height="30"/>
@@ -147,17 +147,23 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                 </textField>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tub-NH-kSa">
+                                                <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tub-NH-kSa">
                                                     <rect key="frame" x="336" y="7" width="30" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="+"/>
+                                                    <connections>
+                                                        <action selector="add:" destination="zHi-DO-7fg" eventType="touchUpInside" id="n3Y-bz-saK"/>
+                                                    </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jby-vP-FVc">
+                                                <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jby-vP-FVc">
                                                     <rect key="frame" x="8" y="7" width="30" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="-"/>
+                                                    <connections>
+                                                        <action selector="subtract:" destination="zHi-DO-7fg" eventType="touchUpInside" id="fNr-yk-OTz"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -175,17 +181,23 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                 </textField>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dTJ-Ta-dcj">
+                                                <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dTJ-Ta-dcj">
                                                     <rect key="frame" x="336" y="7" width="30" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="+"/>
+                                                    <connections>
+                                                        <action selector="add:" destination="zHi-DO-7fg" eventType="touchUpInside" id="4ro-IN-xLC"/>
+                                                    </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QaU-tQ-wBj">
+                                                <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QaU-tQ-wBj">
                                                     <rect key="frame" x="8" y="7" width="30" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="-"/>
+                                                    <connections>
+                                                        <action selector="subtract:" destination="zHi-DO-7fg" eventType="touchUpInside" id="hIS-BM-Ymo"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -195,11 +207,11 @@
                             </tableViewSection>
                         </sections>
                         <connections>
-                            <outlet property="dataSource" destination="zHi-DO-7fg" id="ymn-s9-UAQ"/>
-                            <outlet property="delegate" destination="zHi-DO-7fg" id="cca-UY-XYJ"/>
+                            <outlet property="dataSource" destination="zHi-DO-7fg" id="7u2-IN-wp2"/>
+                            <outlet property="delegate" destination="zHi-DO-7fg" id="XZX-Vv-nWG"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Registration" id="HMP-Dt-Cp7">
+                    <navigationItem key="navigationItem" title="Flight Search" id="HMP-Dt-Cp7" userLabel="Flight Search">
                         <barButtonItem key="rightBarButtonItem" title="Search" id="qoj-UR-dZ6">
                             <connections>
                                 <action selector="search" destination="zHi-DO-7fg" id="47s-xY-K8I"/>

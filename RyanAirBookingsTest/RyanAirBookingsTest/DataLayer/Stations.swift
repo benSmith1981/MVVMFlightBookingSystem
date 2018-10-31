@@ -7,8 +7,19 @@
 //
 
 import Foundation
-struct Stations: Codable {
+struct StationList: Decodable {
+    var stations: [Stations]
+}
+
+struct Stations: Decodable {
     var code: String?
     var countryCode: String?
     var countryName: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case code
+        case countryCode
+        case countryName
+
+    }
 }

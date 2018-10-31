@@ -48,49 +48,69 @@ class TripTableViewController: UITableViewController {
     
     private var tripViewModel: TripViewModel!
     private var resultsListViewModel: ResultsListViewModels!
+    private var stationListViewModel: StationListViewModel = StationListViewModel.init()
+
     private var dataAccess: DataAccess!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.dataAccess = DataAccess()
+
+        createTripModel()
+        bindTextfieldsToTripModel()
+        
+        self.stationListViewModel.getAllStations { (stationListViewModel, success) in
+            if success {
+                self.stationListViewModel = stationListViewModel
+            } else {
+                print("Failed to get stations")
+            }
+        }
+    }
+    
+    func createTripModel() {
         self.tripViewModel = TripViewModel.init(origin: originTextField.text!,
                                                 destination: destinationTextField.text!,
                                                 departure: departureTextField.text!,
                                                 adults: adultsTextField.text!,
                                                 teen: teenTextField.text!,
                                                 children: childrenTextField.text!)
-        
+    }
+    
+    func bindTextfieldsToTripModel() {
         self.tripViewModel.adults.bind(listener: {self.adultsTextField.text = $0})
         self.tripViewModel.teen.bind(listener: {self.teenTextField.text = $0})
         self.tripViewModel.children.bind(listener: {self.childrenTextField.text = $0})
         self.tripViewModel.departure.bind(listener: {self.departureTextField.text = $0})
         self.tripViewModel.destination.bind(listener: {self.destinationTextField.text = $0})
         self.tripViewModel.origin.bind(listener: {self.originTextField.text = $0})
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
     @IBAction func search() {
-        print(self.tripViewModel)
-        self.tripViewModel.departure.value = "New York" 
-        self.resultsListViewModel = ResultsListViewModels(dataAccess: dataAccess, tripviewModel: self.tripViewModel)
+        print(self.tripViewModel.destination.value)
+        print(self.tripViewModel.adults.value)
+
+        if self.tripViewModel.isValid {
+            self.resultsListViewModel = ResultsListViewModels(tripviewModel: self.tripViewModel)
+            self.resultsListViewModel.search(tripviewModel: self.tripViewModel) { (resultListViewModels, message) in
+                print(resultListViewModels)
+                self.performSegue(withIdentifier: R.segue.ryanAirBookingsTestTripTableViewController.showResults, sender: self)
+            }
+        } else {
+            print(self.tripViewModel.validationError)
+        }
+
     }
-    
-    
     
     @IBAction func add(_ sender: Any){
         if let button = sender as? UIButton {
             
             if button.tag == buttonTags.adults.rawValue {
-                
+                self.adultsTextField.add()
+                print(self.tripViewModel.adults.value)
             } else if button.tag == buttonTags.teen.rawValue {
-                
+                self.teenTextField.add()
             } else if button.tag == buttonTags.children.rawValue {
-                
+                self.childrenTextField.add()
             }
         }
     }
@@ -99,15 +119,14 @@ class TripTableViewController: UITableViewController {
         if let button = sender as? UIButton {
             
             if button.tag == buttonTags.adults.rawValue {
-                
+                self.adultsTextField.subtract()
             } else if button.tag == buttonTags.teen.rawValue {
-                
+                self.teenTextField.subtract()
             } else if button.tag == buttonTags.children.rawValue {
-                
+                self.childrenTextField.subtract()
             }
         }
     }
-
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let resultsVC = segue.destination as! ResultsTableViewController
