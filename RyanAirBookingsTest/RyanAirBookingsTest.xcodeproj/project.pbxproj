@@ -152,7 +152,6 @@
 				90F2D4F021891C7C006581CC /* LaunchScreen.storyboard */,
 				90F2D4F321891C7C006581CC /* Info.plist */,
 				90F2D53121893CAD006581CC /* R.generated.swift */,
-				904A72C9218A496900BAB983 /* trip.json */,
 				904A72D1218B44F900BAB983 /* Extensions.swift */,
 			);
 			path = RyanAirBookingsTest;
@@ -161,6 +160,7 @@
 		90F2D4FB21891C7D006581CC /* RyanAirBookingsTestTests */ = {
 			isa = PBXGroup;
 			children = (
+				904A72C9218A496900BAB983 /* trip.json */,
 				90F2D4FC21891C7D006581CC /* RyanAirBookingsTestTests.swift */,
 				90F2D4FE21891C7D006581CC /* Info.plist */,
 			);

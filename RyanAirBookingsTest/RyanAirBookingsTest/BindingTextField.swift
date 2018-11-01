@@ -33,29 +33,49 @@ class BindingTextField : UITextField, UITextFieldDelegate {
 extension BindingTextField {
     func subtract() {
         self.becomeFirstResponder()
-        var numberToReturn = "1"
+        var numberToReturn = "0"
+        numberToReturn = checkNumberNotLessThanZero(numberToReturn)
+        numberToReturn = checkAdultNotLessThanOne(numberToReturn)
+        self.text = numberToReturn
+    }
+    
+    func checkNumberNotLessThanZero(_ numberToReturn: String) -> String{
         if let text = self.text,
             let number = Int(text) {
-            numberToReturn = number > 0 ? "\(number - 1)" : "\(number)"
+            return number > 0 ? "\(number - 1)" : "\(number)"
+        } else {
+            return numberToReturn
         }
+    }
+    
+    func checkAdultNotLessThanOne(_ numberToReturn: String)  -> String {
         if self.tag == buttonTags.adults.rawValue && numberToReturn == "0" {
-            numberToReturn = "1"
+            return "1"
+        } else {
+            return numberToReturn
         }
-        self.text = numberToReturn
     }
     
     func add() {
         self.becomeFirstResponder()
         var numberToReturn = "0"
-
+        numberToReturn = checkNumberNotGreaterThanSix(numberToReturn)
+        numberToReturn = checkAdultNotZero(numberToReturn)
+        self.text = numberToReturn
+    }
+    
+    func checkNumberNotGreaterThanSix(_ numberToReturn: String) -> String{
         if let text = self.text,
             let number = Int(text) {
-            numberToReturn = number < 6 ? "\(number + 1)" : "\(number)"
+            return number < 6 ? "\(number + 1)" : "\(number)"
         }
-        
+        return numberToReturn
+    }
+    
+    func checkAdultNotZero(_ numberToReturn: String) -> String{
         if self.tag == buttonTags.adults.rawValue && numberToReturn == "0" {
-            numberToReturn = "1"
+            return "1"
         }
-        self.text = numberToReturn
+        return numberToReturn
     }
 }
