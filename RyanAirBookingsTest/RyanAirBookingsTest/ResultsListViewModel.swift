@@ -24,31 +24,41 @@ class ResultsListViewModels {
         //search and get results
         DataAccess.shared.getSearchResults(tripviewModel: self.tripviewModel, success: { (trips, data) in
             trips.forEach({ trip in
-                trip.dates?.forEach({ (date) in
-                    let dateOut = date.dateOut
-                    date.flights?.forEach({ (flight) in
-                        let flightNumber = flight.flightNumber
-                        let fare = flight.regularFare?.fares[0].publishedFare
-                        let resultViewModel = ResultViewModel.init(date: dateOut ?? "",
-                                                                   flightNumber: flightNumber ?? "",
-                                                                   regularFare: fare ?? 0.0)
-                        self.resultViewModels.append(resultViewModel)
-//                        flight.regularFare?.fares.forEach({ (fare) in
-//                            let fare = fare.publishedFare
-//                        })
-                    })
-                })
-                
+                self.getDate(from: trip)
             })
-            onCompletion(self, "Succcess")
+            DispatchQueue.main.async {
+                onCompletion(self, "Succcess")
+            }
         }) { (message) in
             print(message)
-            onCompletion(self, message)
+            DispatchQueue.main.async {
+                onCompletion(self, message)
+            }
 
         } //Returns and array of RESULTS objects
         
         //Then put results int view models ready for the view
         //keep view model as plain and dumb as possible...
+    }
+    
+    func getDate(from trip: Trips) {
+        trip.dates?.forEach({ (date) in
+            if let dateOut = date.dateOut {
+                getFlightNumberAndRegularFare(from: date, with: dateOut)
+            }
+        })
+    }
+    
+    func getFlightNumberAndRegularFare(from dates: Dates, with dateOut: String){
+        dates.flights?.forEach({ (flight) in
+            let flightNumber = flight.flightNumber
+            let fare = flight.regularFare?.fares[0].publishedFare
+            //create model
+            let resultViewModel = ResultViewModel.init(date: dateOut ,
+                                                       flightNumber: flightNumber ?? "",
+                                                       regularFare: fare ?? 0.0)
+            self.resultViewModels.append(resultViewModel)
+        })
     }
 }
 

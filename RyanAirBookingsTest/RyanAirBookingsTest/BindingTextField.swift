@@ -25,13 +25,13 @@ class BindingTextField : UITextField, UITextFieldDelegate {
         self.textChanged(textField.text!)
     }
     
+
     
 }
 
 extension BindingTextField {
     func subtract() {
         self.becomeFirstResponder()
-
         var numberToReturn = "1"
         if let text = self.text,
             let number = Int(text), number > 0 {

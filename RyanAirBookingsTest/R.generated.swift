@@ -60,10 +60,19 @@ struct R: Rswift.Validatable {
   
   /// This `R.segue` struct is generated, and contains static references to 1 view controllers.
   struct segue {
-    /// This struct is generated for `TripTableViewController`, and contains static references to 1 segues.
+    /// This struct is generated for `TripTableViewController`, and contains static references to 2 segues.
     struct ryanAirBookingsTestTripTableViewController {
+      /// Segue identifier `searchView`.
+      static let searchView: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, RyanAirBookingsTest.TripTableViewController, SearchControllerTableViewController> = Rswift.StoryboardSegueIdentifier(identifier: "searchView")
       /// Segue identifier `showResults`.
       static let showResults: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, RyanAirBookingsTest.TripTableViewController, RyanAirBookingsTest.ResultsTableViewController> = Rswift.StoryboardSegueIdentifier(identifier: "showResults")
+      
+      /// Optionally returns a typed version of segue `searchView`.
+      /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
+      /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
+      static func searchView(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, RyanAirBookingsTest.TripTableViewController, SearchControllerTableViewController>? {
+        return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.ryanAirBookingsTestTripTableViewController.searchView, segue: segue)
+      }
       
       /// Optionally returns a typed version of segue `showResults`.
       /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
@@ -105,7 +114,7 @@ struct R: Rswift.Validatable {
   
   fileprivate struct intern: Rswift.Validatable {
     fileprivate static func validate() throws {
-      // There are no resources to validate
+      try _R.validate()
     }
     
     fileprivate init() {}
@@ -116,12 +125,20 @@ struct R: Rswift.Validatable {
   fileprivate init() {}
 }
 
-struct _R {
+struct _R: Rswift.Validatable {
+  static func validate() throws {
+    try storyboard.validate()
+  }
+  
   struct nib {
     fileprivate init() {}
   }
   
-  struct storyboard {
+  struct storyboard: Rswift.Validatable {
+    static func validate() throws {
+      try main.validate()
+    }
+    
     struct launchScreen: Rswift.StoryboardResourceWithInitialControllerType {
       typealias InitialController = UIKit.UIViewController
       
@@ -131,11 +148,20 @@ struct _R {
       fileprivate init() {}
     }
     
-    struct main: Rswift.StoryboardResourceWithInitialControllerType {
+    struct main: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
       typealias InitialController = UIKit.UINavigationController
       
       let bundle = R.hostingBundle
       let name = "Main"
+      let searchController = StoryboardViewControllerResource<SearchControllerTableViewController>(identifier: "searchController")
+      
+      func searchController(_: Void = ()) -> SearchControllerTableViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: searchController)
+      }
+      
+      static func validate() throws {
+        if _R.storyboard.main().searchController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'searchController' could not be loaded from storyboard 'Main' as 'SearchControllerTableViewController'.") }
+      }
       
       fileprivate init() {}
     }

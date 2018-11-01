@@ -20,11 +20,15 @@ class StationListViewModel {
                                             countryCode: result.countryCode!,
                                             countryName: result.countryName!)
             })
-            onCompletion(self, true)
+            DispatchQueue.main.async {
+                onCompletion(self, true)
+            }
             
         }) { (message) in
             print(message)
-            onCompletion(self, false)
+            DispatchQueue.main.async {
+                onCompletion(self, false)
+            }
         } //Returns and array of RESULTS objects
         
         //Then put results int view models ready for the view
