@@ -18,7 +18,7 @@ class SearchControllerTableViewController: UITableViewController {
     
     private var searchController: UISearchController = UISearchController(searchResultsController: nil)
     private var filteredStations: [StationListModel] = []
-    private var currentSearchText: String = "" //current page we are scrolling on
+    var currentSearchText: String = "" 
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,9 +37,11 @@ class SearchControllerTableViewController: UITableViewController {
         searchController.searchBar.placeholder = "Search by Country or Code"
         searchController.dimsBackgroundDuringPresentation = false
         searchController.hidesNavigationBarDuringPresentation = false
-        
+        searchController.isActive = true
+        searchController.searchBar.becomeFirstResponder()
         //TODO, fix the searching!!!
         self.tableView.tableHeaderView = searchController.searchBar
+        searchController.searchBar.text = currentSearchText
         
     }
     // MARK: - Table view data source

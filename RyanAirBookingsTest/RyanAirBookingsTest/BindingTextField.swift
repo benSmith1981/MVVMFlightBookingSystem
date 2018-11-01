@@ -35,6 +35,8 @@ extension BindingTextField {
         numberToReturn = checkTextNumberNotLessThanZero(numberToReturn)
         numberToReturn = checkTextAdultNotLessThanOne(numberToReturn)
         self.text = numberToReturn
+        self.resignFirstResponder()
+
     }
     
     func checkTextNumberNotLessThanZero(_ numberToReturn: String) -> String{
@@ -61,6 +63,8 @@ extension BindingTextField {
         numberToReturn = checkTextNumberNotGreaterThanSix(numberToReturn)
         numberToReturn = checkTextAdultNotZero(numberToReturn)
         self.text = numberToReturn
+        self.resignFirstResponder()
+
     }
     
     func checkTextNumberNotGreaterThanSix(_ numberToReturn: String) -> String{

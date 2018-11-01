@@ -161,6 +161,7 @@ class TripTableViewController: UITableViewController, ShowsAlert {
             
             search.unfilteredStations = self.stationListViewModel.stationListViewModels
             search.tripViewModel = self.tripViewModel
+            search.currentSearchText = selectedTextFieldTag == textFields.origin ? (self.originTextField?.text ?? "") : (self.destinationTextField?.text ?? "") 
             search.textField = selectedTextFieldTag == textFields.origin ? self.originTextField : self.destinationTextField
         }
 
