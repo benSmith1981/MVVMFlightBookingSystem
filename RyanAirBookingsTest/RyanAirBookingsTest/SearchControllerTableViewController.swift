@@ -110,11 +110,10 @@ extension SearchControllerTableViewController: UISearchBarDelegate, UISearchResu
     func filterResults(searchBar: UISearchBar) {
         //filter
         self.filteredStations = self.unfilteredStations.filter { (results) -> Bool in
-//            let tmp = results.countryName
-//            let range = tmp?.range(of: searchBar.text ?? "", options: NSString.CompareOptions.caseInsensitive)
-//            return range?.isEmpty != true
-            var stringMatch = results.countryName?.lowercased().range(of:searchBar.text?.lowercased() ?? "")
-            return stringMatch != nil ? true : false
+            let countryMatch = results.countryName?.lowercased().range(of:searchBar.text?.lowercased() ?? "")
+            let codeMatch = results.code?.lowercased().range(of:searchBar.text?.lowercased() ?? "")
+
+            return countryMatch != nil || codeMatch != nil ? true : false
         }
         self.tableView.reloadData()
 
