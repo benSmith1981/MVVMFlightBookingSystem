@@ -17,7 +17,6 @@
 		90F2D50821891C7D006581CC /* RyanAirBookingsTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D50721891C7D006581CC /* RyanAirBookingsTestUITests.swift */; };
 		90F2D52221891C96006581CC /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D51621891C95006581CC /* Results.swift */; };
 		90F2D52521891C96006581CC /* DataAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D51A21891C95006581CC /* DataAccess.swift */; };
-		90F2D52621891C96006581CC /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D51B21891C95006581CC /* Config.swift */; };
 		90F2D52821891C96006581CC /* ResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D51D21891C95006581CC /* ResultsTableViewController.swift */; };
 		90F2D52A21891C96006581CC /* ResultsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D51F21891C95006581CC /* ResultsListViewModel.swift */; };
 		90F2D52B21891C96006581CC /* TripViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D52021891C96006581CC /* TripViewModel.swift */; };
@@ -72,7 +71,6 @@
 		90F2D50921891C7D006581CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90F2D51621891C95006581CC /* Results.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
 		90F2D51A21891C95006581CC /* DataAccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataAccess.swift; sourceTree = "<group>"; };
-		90F2D51B21891C95006581CC /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		90F2D51D21891C95006581CC /* ResultsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsTableViewController.swift; sourceTree = "<group>"; };
 		90F2D51F21891C95006581CC /* ResultsListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsListViewModel.swift; sourceTree = "<group>"; };
 		90F2D52021891C96006581CC /* TripViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripViewModel.swift; sourceTree = "<group>"; };
@@ -184,7 +182,6 @@
 				90F2D51A21891C95006581CC /* DataAccess.swift */,
 				90F2D51621891C95006581CC /* Results.swift */,
 				90F2D52F21893155006581CC /* Stations.swift */,
-				90F2D51B21891C95006581CC /* Config.swift */,
 			);
 			path = DataLayer;
 			sourceTree = "<group>";
@@ -534,7 +531,6 @@
 				90F2D52821891C96006581CC /* ResultsTableViewController.swift in Sources */,
 				90F2D52221891C96006581CC /* Results.swift in Sources */,
 				90F2D52B21891C96006581CC /* TripViewModel.swift in Sources */,
-				90F2D52621891C96006581CC /* Config.swift in Sources */,
 				90F2D52521891C96006581CC /* DataAccess.swift in Sources */,
 				90F2D53021893155006581CC /* Stations.swift in Sources */,
 				90F2D53221893CAD006581CC /* R.generated.swift in Sources */,

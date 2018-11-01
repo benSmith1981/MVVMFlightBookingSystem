@@ -8,7 +8,7 @@
 
 import Foundation
 import Alamofire
-
+import SVProgressHUD
 class APIResponse {
     var json:Data;
     var errorMessage:String?;
@@ -35,13 +35,19 @@ class DataAccess {
         if let origin = tripviewModel.origin.value,
             let destination = tripviewModel.destination.value,
             let departureDate = tripviewModel.departure.value,
-            let searchURL: URL = URL(string: "https://sit-nativeapps.ryanair.com/api/v4/Availability?origin=\(origin)&destination=\(destination)&dateout=\(departureDate)&datein=&flexdaysbeforeout=3&flexdaysout=3&flexdaysbeforein=3&flexdaysin=3&adt=\(tripviewModel.adults.value ?? "0")&teen=\(tripviewModel.teen.value ?? "0")&chd=\(tripviewModel.children.value ?? "0")&roundtrip=false&ToUs=AGREED"){
-
+            let adults = tripviewModel.adults.value,
+            let children = tripviewModel.children.value,
+            let teens = tripviewModel.teen.value,
+            
+            let searchURL: URL = URL(string: "https://sit-nativeapps.ryanair.com/api/v4/Availability?origin=\(origin)&destination=\(destination)&dateout=\(departureDate)&datein=&flexdaysbeforeout=3&flexdaysout=3&flexdaysbeforein=3&flexdaysin=3&adt=\(adults == "" ? "0" : adults)&teen=\(teens == "" ? "0" : teens)&chd=\(children == "" ? "0" : children)&roundtrip=false&ToUs=AGREED"){
+            SVProgressHUD.show()
             Alamofire.request(searchURL,
                               method: .get,
                               parameters: nil,
                               encoding: JSONEncoding.default).responseData { (response) in
                                 response.result.ifSuccess({
+                                    SVProgressHUD.dismiss()
+
                                     if let jsonData = response.data {
                                         let res = APIResponse(json: jsonData)
 
@@ -56,10 +62,14 @@ class DataAccess {
                                         }
 
                                     } else {
+                                        SVProgressHUD.dismiss()
+
                                         return failure("Unexpected error: Error parsing response")
                                     }
                                 })
                                 response.result.ifFailure({
+                                    SVProgressHUD.dismiss()
+
                                     return failure("Failed")
 
                                 })
