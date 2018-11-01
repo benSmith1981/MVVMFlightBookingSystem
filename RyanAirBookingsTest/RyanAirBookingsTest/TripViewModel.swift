@@ -88,9 +88,6 @@ extension TripViewModel {
             adultEmpty == true && childrenEmpty == true && teenEmpty == true{
             self.validationError.append(ValidationError.init(validationName: "No Passengers", message: "You must provide atleast one passenger"))
         }
-        
-//        if let empty = adults.value?.isEmpty, empty == true {
-//            self.validationError.append(ValidationError.init(validationName: "departure", message: "Provide Departure Date"))
-//        }
+    
     }
 }

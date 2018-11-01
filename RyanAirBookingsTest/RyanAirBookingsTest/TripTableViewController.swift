@@ -71,38 +71,6 @@ class TripTableViewController: UITableViewController, ShowsAlert {
         
     }
     
-    
-    func showDatePicker(){
-        //Formate Date
-        datePicker.datePickerMode = .date
-        
-        //ToolBar
-        let toolbar = UIToolbar();
-        toolbar.sizeToFit()
-        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(donedatePicker));
-        
-        toolbar.setItems([doneButton], animated: false)
-        
-        departureTextField.inputAccessoryView = toolbar
-        departureTextField.inputView = datePicker
-        
-    }
-    
-    @objc func donedatePicker(){
-        
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd"
-        departureTextField.text = formatter.string(from: datePicker.date)
-        //TODO: for some reason when the date is set by the other component the binding doesn't work to update the model so i have to do it manually
-//        self.tripViewModel.departure.value = formatter.string(from: datePicker.date)
-        print(self.tripViewModel.departure.value)
-        self.view.endEditing(true)
-    }
-    
-    @objc func cancelDatePicker(){
-        self.view.endEditing(true)
-    }
-    
     func getStations(){
         self.stationListViewModel.getAllStations { (stationListViewModel, success) in
             if success {
@@ -196,6 +164,36 @@ class TripTableViewController: UITableViewController, ShowsAlert {
             search.textField = selectedTextFieldTag == textFields.origin ? self.originTextField : self.destinationTextField
         }
 
+    }
+}
+//#MARK: Date picker things...refactor to other class?
+extension TripTableViewController {
+    func showDatePicker(){
+        //Formate Date
+        datePicker.datePickerMode = .date
+        
+        //ToolBar
+        let toolbar = UIToolbar();
+        toolbar.sizeToFit()
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(donedatePicker));
+        
+        toolbar.setItems([doneButton], animated: false)
+        
+        departureTextField.inputAccessoryView = toolbar
+        departureTextField.inputView = datePicker
+        
+    }
+    
+    @objc func donedatePicker(){
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        departureTextField.text = formatter.string(from: datePicker.date)
+        self.view.endEditing(true)
+    }
+    
+    @objc func cancelDatePicker(){
+        self.view.endEditing(true)
     }
 }
 
