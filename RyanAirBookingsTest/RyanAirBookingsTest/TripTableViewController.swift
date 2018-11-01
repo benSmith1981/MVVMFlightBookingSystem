@@ -94,7 +94,8 @@ class TripTableViewController: UITableViewController, ShowsAlert {
         formatter.dateFormat = "yyyy-MM-dd"
         departureTextField.text = formatter.string(from: datePicker.date)
         //TODO: for some reason when the date is set by the other component the binding doesn't work to update the model so i have to do it manually
-        self.tripViewModel.departure.value = formatter.string(from: datePicker.date)
+//        self.tripViewModel.departure.value = formatter.string(from: datePicker.date)
+        print(self.tripViewModel.departure.value)
         self.view.endEditing(true)
     }
     
@@ -161,13 +162,10 @@ class TripTableViewController: UITableViewController, ShowsAlert {
             //TODO, make the binding work so we don't have to set the model as well as the textfiled!!!
             if button.tag == buttonTags.adults.rawValue {
                 self.adultsTextField.add()
-                self.tripViewModel.adults.value = self.adultsTextField.text
             } else if button.tag == buttonTags.teen.rawValue {
                 self.teenTextField.add()
-                self.tripViewModel.teen.value = self.teenTextField.text
             } else if button.tag == buttonTags.children.rawValue {
                 self.childrenTextField.add()
-                self.tripViewModel.children.value = self.childrenTextField.text
             }
         }
     }
@@ -177,13 +175,10 @@ class TripTableViewController: UITableViewController, ShowsAlert {
             //TODO, make the binding work so we don't have to set the model as well as the textfiled!!!
             if button.tag == buttonTags.adults.rawValue {
                 self.adultsTextField.subtract()
-                self.tripViewModel.adults.value = self.adultsTextField.text
             } else if button.tag == buttonTags.teen.rawValue {
                 self.teenTextField.subtract()
-                self.tripViewModel.teen.value = self.teenTextField.text
             } else if button.tag == buttonTags.children.rawValue {
                 self.childrenTextField.subtract()
-                self.tripViewModel.children.value = self.childrenTextField.text
             }
         }
     }
@@ -197,7 +192,6 @@ class TripTableViewController: UITableViewController, ShowsAlert {
             let search = segue.destination as! SearchControllerTableViewController
             
             search.unfilteredStations = self.stationListViewModel.stationListViewModels
-            search.textFieldType = self.selectedTextFieldTag
             search.tripViewModel = self.tripViewModel
             search.textField = selectedTextFieldTag == textFields.origin ? self.originTextField : self.destinationTextField
         }

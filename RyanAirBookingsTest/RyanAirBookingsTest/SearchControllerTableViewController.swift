@@ -15,7 +15,6 @@ class SearchControllerTableViewController: UITableViewController {
     var tripViewModel: TripViewModel!
     var unfilteredStations: [StationListModel] = []
     var textField: BindingTextField?
-    var textFieldType: textFields?
     
     private var searchController: UISearchController = UISearchController(searchResultsController: nil)
     private var filteredStations: [StationListModel] = []
@@ -41,7 +40,6 @@ class SearchControllerTableViewController: UITableViewController {
         
         //TODO, fix the searching!!!
         self.tableView.tableHeaderView = searchController.searchBar
-        self.navigationController?.navigationItem.titleView = searchController.searchBar
         
     }
     // MARK: - Table view data source
@@ -66,13 +64,12 @@ class SearchControllerTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.searchController.searchBar.resignFirstResponder()
         self.searchController.isActive = false
-        //I am only setting thte tripview model here because the binding doesnt work on textfield, TODO
-        if textFieldType == textFields.destination {
-            self.tripViewModel.destination.value = self.filteredStations[indexPath.row].code
-        } else if textFieldType == textFields.origin{
+//        self.textField?.text = self.filteredStations[indexPath.row].code
+        if textField?.tag == textFields.origin.rawValue {
             self.tripViewModel.origin.value = self.filteredStations[indexPath.row].code
+        } else if textField?.tag == textFields.destination.rawValue {
+            self.tripViewModel.destination.value = self.filteredStations[indexPath.row].code
         }
-        self.textField?.text = self.filteredStations[indexPath.row].code
         self.navigationController?.popViewController(animated: true)
     }
 

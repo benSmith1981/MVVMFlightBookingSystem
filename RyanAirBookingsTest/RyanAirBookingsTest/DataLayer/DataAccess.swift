@@ -101,11 +101,11 @@ class DataAccess {
                                     }
                                     
                                 } else {
-                                    failure("Unexpected error: Error parsing response")
+                                    return failure("Unexpected error: Error parsing response")
                                 }
                             })
                             response.result.ifFailure({
-                                failure("Failed")
+                                return failure("Failed")
                                 
                             })
         }
