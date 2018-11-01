@@ -38,6 +38,9 @@ extension BindingTextField {
             let number = Int(text) {
             numberToReturn = number > 0 ? "\(number - 1)" : "\(number)"
         }
+        if self.tag == buttonTags.adults.rawValue && numberToReturn == "0" {
+            numberToReturn = "1"
+        }
         self.text = numberToReturn
     }
     
