@@ -13,12 +13,13 @@ import SVProgressHUD
 
 class SearchControllerTableViewController: UITableViewController {
     var tripViewModel: TripViewModel!
-    private var filteredStations: [StationListModel] = []
     var unfilteredStations: [StationListModel] = []
     var textField: BindingTextField?
     var textFieldType: textFields?
+    
+    private var searchController: UISearchController = UISearchController(searchResultsController: nil)
+    private var filteredStations: [StationListModel] = []
     private var currentSearchText: String = "" //current page we are scrolling on
-    var searchController: UISearchController = UISearchController(searchResultsController: nil)
 
     override func viewDidLoad() {
         super.viewDidLoad()

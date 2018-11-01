@@ -62,7 +62,6 @@ class TripTableViewController: UITableViewController, ShowsAlert {
 
         createTripModel()
         bindTextfieldsToTripModel()
-//        setupDatePicker()
         showDatePicker()
         getStations()
         

@@ -14,7 +14,6 @@ import Foundation
 class ResultsListViewModels {
     var resultViewModels: [ResultViewModel] = [ResultViewModel]()
     private var tripviewModel: TripViewModel
-    
     init(tripviewModel: TripViewModel) {
         self.tripviewModel = tripviewModel
 

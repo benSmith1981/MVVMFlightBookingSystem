@@ -25,7 +25,8 @@ extension String {
         //Create Date Formatter
         let dateFormatter = DateFormatter()
         //Specify Format of String to Parse
-        dateFormatter.dateFormat = "2018-04-10T04:00:00.000Z"
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
+        
         //Parse into NSDate
         let unitFlags = Set<Calendar.Component>([.hour, .minute, .day, .month, .year,])
 
@@ -49,7 +50,7 @@ extension String {
             
             //Return Parsed Date
             if let hour = components.hour, let minute = components.minute, let day = components.day, let monthComp = components.month, let year = components.year {
-                return "\(hour):\(minute), \(day) \(month[monthComp]) \(year))"
+                return "\(hour):\(minute), \(day) \(month[monthComp-1]) \(year)"
             } else {
                 return self
             }
