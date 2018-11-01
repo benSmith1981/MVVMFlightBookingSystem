@@ -25,6 +25,7 @@ class BindingTextField : UITextField, UITextFieldDelegate {
         self.textChanged(textField.text!)
     }
     
+    
 
     
 }
@@ -43,9 +44,14 @@ extension BindingTextField {
     func add() {
         self.becomeFirstResponder()
         var numberToReturn = "0"
+
         if let text = self.text,
             let number = Int(text) {
             numberToReturn = number < 6 ? "\(number + 1)" : "\(number)"
+        }
+        
+        if self.tag == buttonTags.adults.rawValue && numberToReturn == "0" {
+            numberToReturn = "1"
         }
         self.text = numberToReturn
     }
