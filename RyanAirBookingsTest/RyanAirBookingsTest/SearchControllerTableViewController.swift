@@ -16,12 +16,16 @@ class SearchControllerTableViewController: UITableViewController {
     private var filteredStations: [StationListModel] = []
     var unfilteredStations: [StationListModel] = []
     var textField: BindingTextField?
+    var textFieldType: textFields?
     private var currentSearchText: String = "" //current page we are scrolling on
     var searchController: UISearchController = UISearchController(searchResultsController: nil)
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         self.filteredStations = self.unfilteredStations
+        self.filteredStations = filteredStations.sorted { $0.countryName! < $1.countryName! }
+
         setupSearchBar()
     }
 
@@ -34,7 +38,9 @@ class SearchControllerTableViewController: UITableViewController {
         searchController.dimsBackgroundDuringPresentation = false
         searchController.hidesNavigationBarDuringPresentation = false
         
-//        self.navigationController?.navigationBar.addSubview(searchController.searchBar)
+        //TODO, fix the searching!!!
+        self.tableView.tableHeaderView = searchController.searchBar
+        self.navigationController?.navigationItem.titleView = searchController.searchBar
         
     }
     // MARK: - Table view data source
@@ -52,14 +58,20 @@ class SearchControllerTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         let station = self.filteredStations[indexPath.row]
-        cell.textLabel?.text = "\(station.countryName ?? "Unknown"), \(station.countryCode ?? "Unknown")"
+        cell.textLabel?.text = "\(station.countryName ?? "Unknown"), \(station.countryCode ?? "Unknown"), \(station.code ?? "Unknown")"
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.searchController.searchBar.resignFirstResponder()
         self.searchController.isActive = false
-        self.textField?.text = self.filteredStations[indexPath.row].countryCode
+        //I am only setting thte tripview model here because the binding doesnt work on textfield, TODO
+        if textFieldType == textFields.destination {
+            self.tripViewModel.destination.value = self.filteredStations[indexPath.row].code
+        } else if textFieldType == textFields.origin{
+            self.tripViewModel.origin.value = self.filteredStations[indexPath.row].code
+        }
+        self.textField?.text = self.filteredStations[indexPath.row].code
         self.navigationController?.popViewController(animated: true)
     }
 
@@ -98,10 +110,11 @@ extension SearchControllerTableViewController: UISearchBarDelegate, UISearchResu
     func filterResults(searchBar: UISearchBar) {
         //filter
         self.filteredStations = self.unfilteredStations.filter { (results) -> Bool in
-            let tmp = results.countryName
-            let range = tmp?.range(of: searchBar.text ?? "", options: NSString.CompareOptions.caseInsensitive)
-            return range?.isEmpty != true
-            
+//            let tmp = results.countryName
+//            let range = tmp?.range(of: searchBar.text ?? "", options: NSString.CompareOptions.caseInsensitive)
+//            return range?.isEmpty != true
+            var stringMatch = results.countryName?.lowercased().range(of:searchBar.text?.lowercased() ?? "")
+            return stringMatch != nil ? true : false
         }
         self.tableView.reloadData()
 

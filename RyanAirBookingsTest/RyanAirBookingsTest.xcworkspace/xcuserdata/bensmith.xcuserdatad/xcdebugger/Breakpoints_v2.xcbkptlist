@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RyanAirBookingsTest/TripTableViewController.swift"
-            timestampString = "562780797.516481"
+            timestampString = "562783265.177616"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "159"
-            endingLineNumber = "159"
+            startingLineNumber = "156"
+            endingLineNumber = "156"
             landmarkName = "search()"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RyanAirBookingsTest/DataLayer/DataAccess.swift"
-            timestampString = "562780797.517248"
+            timestampString = "562783265.177771"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
             landmarkName = "getStations(success:failure:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RyanAirBookingsTest/ResultsListViewModel.swift"
-            timestampString = "562780797.517359"
+            timestampString = "562783265.1778491"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "26"
@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RyanAirBookingsTest/TripTableViewController.swift"
-            timestampString = "562780797.5174299"
+            timestampString = "562783265.177911"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "148"
-            endingLineNumber = "148"
+            startingLineNumber = "145"
+            endingLineNumber = "145"
             landmarkName = "search()"
             landmarkType = "7">
          </BreakpointContent>
@@ -106,11 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RyanAirBookingsTest/DataLayer/DataAccess.swift"
-            timestampString = "562780797.517933"
+            timestampString = "562783265.178031"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
             landmarkName = "getSearchResults(tripviewModel:success:failure:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -153,40 +153,8 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RyanAirBookingsTest/TripTableViewController.swift"
-            timestampString = "562780797.518098"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "211"
-            endingLineNumber = "211"
-            landmarkName = "textField(_:shouldChangeCharactersIn:replacementString:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RyanAirBookingsTest/SearchControllerTableViewController.swift"
-            timestampString = "562780797.518382"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
-            landmarkName = "setupSearchBar()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "RyanAirBookingsTest/ResultsListViewModel.swift"
-            timestampString = "562780797.51844"
+            timestampString = "562783265.178182"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "25"
@@ -234,11 +202,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RyanAirBookingsTest/SearchControllerTableViewController.swift"
-            timestampString = "562780797.518483"
+            timestampString = "562783265.1782399"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -250,59 +218,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RyanAirBookingsTestTests/RyanAirBookingsTestTests.swift"
-            timestampString = "562780797.518528"
+            timestampString = "562783265.178668"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "testParsingForTestURLWorks()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "RyanAirBookingsTestTests.RyanAirBookingsTestTests.testParsingForTestURLWorks() -&gt; ()"
-                  moduleName = "RyanAirBookingsTestTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bensmith/Documents/RyanAirBookingTest/RyanAirBookingsTest/RyanAirBookingsTestTests/RyanAirBookingsTestTests.swift"
-                  timestampString = "562780001.672262"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30"
-                  offsetFromSymbolStart = "345">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Array&lt;RyanAirBookingsTest.Trips&gt;, Foundation.Data) -&gt; () in RyanAirBookingsTestTests.RyanAirBookingsTestTests.testParsingForTestURLWorks() -&gt; ()"
-                  moduleName = "RyanAirBookingsTestTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bensmith/Documents/RyanAirBookingTest/RyanAirBookingsTest/RyanAirBookingsTestTests/RyanAirBookingsTestTests.swift"
-                  timestampString = "562780001.674862"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31"
-                  offsetFromSymbolStart = "114">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RyanAirBookingsTestTests/RyanAirBookingsTestTests.swift"
-            timestampString = "562780797.518575"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
             landmarkName = "testParsingForTestURLFails()"
             landmarkType = "7">
             <Locations>
@@ -345,13 +265,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RyanAirBookingsTestTests/RyanAirBookingsTestTests.swift"
-            timestampString = "562780797.5186369"
+            filePath = "RyanAirBookingsTest/DataLayer/DataAccess.swift"
+            timestampString = "562783265.178731"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "testParsingForTestURLFails()"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "getSearchResults(tripviewModel:success:failure:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -361,24 +281,24 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RyanAirBookingsTestTests/RyanAirBookingsTestTests.swift"
-            timestampString = "562780797.51869"
+            filePath = "RyanAirBookingsTest/DataLayer/DataAccess.swift"
+            timestampString = "562783265.178785"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "testParsingForTestURLFails()"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "getSearchResults(tripviewModel:success:failure:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RyanAirBookingsTest/DataLayer/DataAccess.swift"
-            timestampString = "562780797.518742"
+            timestampString = "562783265.178836"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "59"
@@ -394,11 +314,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RyanAirBookingsTest/DataLayer/DataAccess.swift"
-            timestampString = "562780797.518796"
+            timestampString = "562783265.178885"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
             landmarkName = "getSearchResults(tripviewModel:success:failure:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -410,11 +330,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RyanAirBookingsTest/DataLayer/DataAccess.swift"
-            timestampString = "562780797.5188479"
+            timestampString = "562783265.178936"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
             landmarkName = "getSearchResults(tripviewModel:success:failure:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -426,11 +346,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RyanAirBookingsTest/DataLayer/DataAccess.swift"
-            timestampString = "562780797.5189"
+            timestampString = "562783265.178986"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "getSearchResults(tripviewModel:success:failure:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -438,48 +358,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RyanAirBookingsTest/DataLayer/DataAccess.swift"
-            timestampString = "562780797.518954"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
-            landmarkName = "getSearchResults(tripviewModel:success:failure:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RyanAirBookingsTest/DataLayer/DataAccess.swift"
-            timestampString = "562780797.519004"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
-            landmarkName = "getSearchResults(tripviewModel:success:failure:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RyanAirBookingsTest/DataLayer/DataAccess.swift"
-            timestampString = "562780797.5190541"
+            timestampString = "562783265.179034"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "35"
             endingLineNumber = "35"
             landmarkName = "getSearchResults(tripviewModel:success:failure:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RyanAirBookingsTest/SearchControllerTableViewController.swift"
+            timestampString = "562783265.179085"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

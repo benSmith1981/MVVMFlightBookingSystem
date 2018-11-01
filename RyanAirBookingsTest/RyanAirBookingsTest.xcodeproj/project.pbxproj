@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		42F81505CB815FC9107B43C5 /* Pods_RyanAirBookingsTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1D5E0EB30E2B2F5B7D2923C /* Pods_RyanAirBookingsTestTests.framework */; };
 		904A72CA218A496900BAB983 /* trip.json in Resources */ = {isa = PBXBuildFile; fileRef = 904A72C9218A496900BAB983 /* trip.json */; };
-		904A72CC218A520700BAB983 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904A72CB218A520700BAB983 /* DatePickerView.swift */; };
 		904A72D0218B2A0100BAB983 /* SearchControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904A72CF218B2A0100BAB983 /* SearchControllerTableViewController.swift */; };
 		904A72D2218B44F900BAB983 /* AlertViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904A72D1218B44F900BAB983 /* AlertViewExtension.swift */; };
 		90F2D4EF21891C7C006581CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90F2D4EE21891C7C006581CC /* Assets.xcassets */; };
@@ -58,7 +57,6 @@
 		81E2A3BA3836D52737BCCDC7 /* Pods-RyanAirBookingsTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RyanAirBookingsTestTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RyanAirBookingsTestTests/Pods-RyanAirBookingsTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		883839220D05C62824F118F6 /* Pods_RyanAirBookingsTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RyanAirBookingsTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		904A72C9218A496900BAB983 /* trip.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = trip.json; sourceTree = "<group>"; };
-		904A72CB218A520700BAB983 /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
 		904A72CF218B2A0100BAB983 /* SearchControllerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchControllerTableViewController.swift; sourceTree = "<group>"; };
 		904A72D1218B44F900BAB983 /* AlertViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewExtension.swift; sourceTree = "<group>"; };
 		90F2D4E421891C7B006581CC /* RyanAirBookingsTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RyanAirBookingsTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,7 +144,6 @@
 				90F2D51F21891C95006581CC /* ResultsListViewModel.swift */,
 				90F2D538218A36B8006581CC /* TripTableViewController.swift */,
 				90F2D52021891C96006581CC /* TripViewModel.swift */,
-				904A72CB218A520700BAB983 /* DatePickerView.swift */,
 				90F2D5352189DD9D006581CC /* StationViewListModel.swift */,
 				90F2D52D21891DF0006581CC /* BindingTextField.swift */,
 				904A72CF218B2A0100BAB983 /* SearchControllerTableViewController.swift */,
@@ -539,7 +536,6 @@
 				90F2D52B21891C96006581CC /* TripViewModel.swift in Sources */,
 				90F2D52621891C96006581CC /* Config.swift in Sources */,
 				90F2D52521891C96006581CC /* DataAccess.swift in Sources */,
-				904A72CC218A520700BAB983 /* DatePickerView.swift in Sources */,
 				90F2D53021893155006581CC /* Stations.swift in Sources */,
 				90F2D53221893CAD006581CC /* R.generated.swift in Sources */,
 				90F2D52A21891C96006581CC /* ResultsListViewModel.swift in Sources */,

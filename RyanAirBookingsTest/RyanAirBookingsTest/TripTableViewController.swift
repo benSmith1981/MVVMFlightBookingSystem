@@ -13,6 +13,11 @@ enum buttonTags: Int {
     case teen
     case children
 }
+
+enum textFields: Int {
+    case origin = 1
+    case destination = 2
+}
 class TripTableViewController: UITableViewController, ShowsAlert {
 
     @IBOutlet var originTextField: BindingTextField! {
@@ -49,8 +54,7 @@ class TripTableViewController: UITableViewController, ShowsAlert {
     private var tripViewModel: TripViewModel!
     private var resultsListViewModel: ResultsListViewModels!
     private var stationListViewModel: StationListViewModel = StationListViewModel.init()
-    private var selectedTextFieldTag: Int = 0
-    private var dataAccess: DataAccess!
+    private var selectedTextFieldTag: textFields?
     private let datePicker = UIDatePicker()
     
     override func viewDidLoad() {
@@ -90,6 +94,8 @@ class TripTableViewController: UITableViewController, ShowsAlert {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
         departureTextField.text = formatter.string(from: datePicker.date)
+        //TODO: for some reason when the date is set by the other component the binding doesn't work to update the model so i have to do it manually
+        self.tripViewModel.departure.value = formatter.string(from: datePicker.date)
         self.view.endEditing(true)
     }
     
@@ -105,15 +111,6 @@ class TripTableViewController: UITableViewController, ShowsAlert {
                 print("Failed to get stations")
             }
         }
-    }
-    
-    func setupDatePicker() {
-        let datePicker = DatePickerView(frame: CGRect.init(x: 0, y: 300, width: self.view.frame.size.width, height: 200.0))
-        datePicker.tripViewModel = self.tripViewModel
-        datePicker.textField = self.departureTextField
-        datePicker.setupToolBar()
-        self.departureTextField.inputView = datePicker.datePickerView
-
     }
     
     func createTripModel() {
@@ -162,25 +159,32 @@ class TripTableViewController: UITableViewController, ShowsAlert {
     @IBAction func add(_ sender: Any){
         if let button = sender as? UIButton {
             
+            //TODO, make the binding work so we don't have to set the model as well as the textfiled!!!
             if button.tag == buttonTags.adults.rawValue {
                 self.adultsTextField.add()
+                self.tripViewModel.adults.value = self.adultsTextField.text
             } else if button.tag == buttonTags.teen.rawValue {
                 self.teenTextField.add()
+                self.tripViewModel.teen.value = self.teenTextField.text
             } else if button.tag == buttonTags.children.rawValue {
                 self.childrenTextField.add()
+                self.tripViewModel.children.value = self.childrenTextField.text
             }
         }
     }
 
     @IBAction func subtract(_ sender: Any){
         if let button = sender as? UIButton {
-            
+            //TODO, make the binding work so we don't have to set the model as well as the textfiled!!!
             if button.tag == buttonTags.adults.rawValue {
                 self.adultsTextField.subtract()
+                self.tripViewModel.adults.value = self.adultsTextField.text
             } else if button.tag == buttonTags.teen.rawValue {
                 self.teenTextField.subtract()
+                self.tripViewModel.teen.value = self.teenTextField.text
             } else if button.tag == buttonTags.children.rawValue {
                 self.childrenTextField.subtract()
+                self.tripViewModel.children.value = self.childrenTextField.text
             }
         }
     }
@@ -194,22 +198,21 @@ class TripTableViewController: UITableViewController, ShowsAlert {
             let search = segue.destination as! SearchControllerTableViewController
             
             search.unfilteredStations = self.stationListViewModel.stationListViewModels
-//            search.searchController.searchBar.text = textField.tag == textFields.origin.rawValue ? self.originTextField.text : self.destinationTextField.text
-            search.textField = selectedTextFieldTag == textFields.origin.rawValue ? self.originTextField : self.destinationTextField
+            search.textFieldType = self.selectedTextFieldTag
+            search.tripViewModel = self.tripViewModel
+            search.textField = selectedTextFieldTag == textFields.origin ? self.originTextField : self.destinationTextField
         }
 
     }
 }
 
-enum textFields: Int {
-    case origin = 1
-    case destination = 2
-}
+
 extension TripTableViewController: UITextFieldDelegate {
+
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
         if textField.tag == textFields.origin.rawValue || textField.tag == textFields.destination.rawValue{
-            self.selectedTextFieldTag = textField.tag
+            self.selectedTextFieldTag = textField.tag == textFields.origin.rawValue ? textFields.origin : textFields.destination
             self.performSegue(withIdentifier: "searchView", sender: self)
             
         }
