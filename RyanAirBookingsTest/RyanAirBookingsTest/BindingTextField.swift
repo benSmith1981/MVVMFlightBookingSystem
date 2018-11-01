@@ -34,8 +34,8 @@ extension BindingTextField {
         self.becomeFirstResponder()
         var numberToReturn = "1"
         if let text = self.text,
-            let number = Int(text), number > 0 {
-            numberToReturn = "\(number - 1)"
+            let number = Int(text) {
+            numberToReturn = number > 0 ? "\(number - 1)" : "\(number)"
         }
         self.text = numberToReturn
     }
@@ -45,7 +45,7 @@ extension BindingTextField {
         var numberToReturn = "0"
         if let text = self.text,
             let number = Int(text) {
-            numberToReturn = "\(number + 1)"
+            numberToReturn = number < 6 ? "\(number + 1)" : "\(number)"
         }
         self.text = numberToReturn
     }
