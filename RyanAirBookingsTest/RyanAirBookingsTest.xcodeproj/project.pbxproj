@@ -11,6 +11,7 @@
 		904A72CA218A496900BAB983 /* trip.json in Resources */ = {isa = PBXBuildFile; fileRef = 904A72C9218A496900BAB983 /* trip.json */; };
 		904A72D0218B2A0100BAB983 /* SearchControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904A72CF218B2A0100BAB983 /* SearchControllerTableViewController.swift */; };
 		904A72D2218B44F900BAB983 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904A72D1218B44F900BAB983 /* Extensions.swift */; };
+		904A72E2218C897D00BAB983 /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904A72E1218C897D00BAB983 /* TableViewDataSource.swift */; };
 		90F2D4EF21891C7C006581CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90F2D4EE21891C7C006581CC /* Assets.xcassets */; };
 		90F2D4F221891C7C006581CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90F2D4F021891C7C006581CC /* LaunchScreen.storyboard */; };
 		90F2D4FD21891C7D006581CC /* RyanAirBookingsTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F2D4FC21891C7D006581CC /* RyanAirBookingsTestTests.swift */; };
@@ -58,6 +59,7 @@
 		904A72C9218A496900BAB983 /* trip.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = trip.json; sourceTree = "<group>"; };
 		904A72CF218B2A0100BAB983 /* SearchControllerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchControllerTableViewController.swift; sourceTree = "<group>"; };
 		904A72D1218B44F900BAB983 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		904A72E1218C897D00BAB983 /* TableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
 		90F2D4E421891C7B006581CC /* RyanAirBookingsTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RyanAirBookingsTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90F2D4EC21891C7B006581CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		90F2D4EE21891C7C006581CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -113,6 +115,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		904A72DD218C88DF00BAB983 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				90F2D51F21891C95006581CC /* ResultsListViewModel.swift */,
+				90F2D52021891C96006581CC /* TripViewModel.swift */,
+				90F2D5352189DD9D006581CC /* StationViewListModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		904A72DE218C88EE00BAB983 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				90F2D51D21891C95006581CC /* ResultsTableViewController.swift */,
+				90F2D538218A36B8006581CC /* TripTableViewController.swift */,
+				904A72CF218B2A0100BAB983 /* SearchControllerTableViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		904A72DF218C890200BAB983 /* Webservices */ = {
+			isa = PBXGroup;
+			children = (
+				90F2D51A21891C95006581CC /* DataAccess.swift */,
+			);
+			path = Webservices;
+			sourceTree = "<group>";
+		};
+		904A72E0218C897500BAB983 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				904A72E1218C897D00BAB983 /* TableViewDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
 		90F2D4DB21891C7B006581CC = {
 			isa = PBXGroup;
 			children = (
@@ -138,13 +176,11 @@
 		90F2D4E621891C7B006581CC /* RyanAirBookingsTest */ = {
 			isa = PBXGroup;
 			children = (
-				90F2D51D21891C95006581CC /* ResultsTableViewController.swift */,
-				90F2D51F21891C95006581CC /* ResultsListViewModel.swift */,
-				90F2D538218A36B8006581CC /* TripTableViewController.swift */,
-				90F2D52021891C96006581CC /* TripViewModel.swift */,
+				904A72E0218C897500BAB983 /* DataSource */,
+				904A72DF218C890200BAB983 /* Webservices */,
+				904A72DE218C88EE00BAB983 /* ViewControllers */,
+				904A72DD218C88DF00BAB983 /* ViewModels */,
 				90F2D52D21891DF0006581CC /* BindingTextField.swift */,
-				904A72CF218B2A0100BAB983 /* SearchControllerTableViewController.swift */,
-				90F2D5352189DD9D006581CC /* StationViewListModel.swift */,
 				90F2D53321894C35006581CC /* AppDelegate.swift */,
 				90F2D51921891C95006581CC /* DataLayer */,
 				90F2D4EB21891C7B006581CC /* Main.storyboard */,
@@ -179,7 +215,6 @@
 		90F2D51921891C95006581CC /* DataLayer */ = {
 			isa = PBXGroup;
 			children = (
-				90F2D51A21891C95006581CC /* DataAccess.swift */,
 				90F2D51621891C95006581CC /* Results.swift */,
 				90F2D52F21893155006581CC /* Stations.swift */,
 			);
@@ -534,6 +569,7 @@
 				90F2D52521891C96006581CC /* DataAccess.swift in Sources */,
 				90F2D53021893155006581CC /* Stations.swift in Sources */,
 				90F2D53221893CAD006581CC /* R.generated.swift in Sources */,
+				904A72E2218C897D00BAB983 /* TableViewDataSource.swift in Sources */,
 				90F2D52A21891C96006581CC /* ResultsListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

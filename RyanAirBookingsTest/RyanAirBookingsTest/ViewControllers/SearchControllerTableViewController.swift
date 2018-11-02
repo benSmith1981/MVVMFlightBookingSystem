@@ -14,19 +14,24 @@ import SVProgressHUD
 class SearchControllerTableViewController: UITableViewController {
     var tripViewModel: TripViewModel!
     var unfilteredStations: [StationListModel] = []
+    private var filteredStations: [StationListModel] = []
     var textField: BindingTextField?
     
     private var searchController: UISearchController = UISearchController(searchResultsController: nil)
-    private var filteredStations: [StationListModel] = []
-    var currentSearchText: String = "" 
+    var currentSearchText: String = ""
+
+    private var dataSource: TableViewDataSource<UITableViewCell,StationListModel>! //SourceViewModel rep each data in the cell we want to display
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupSearchBar()
 
         self.filteredStations = self.unfilteredStations
         self.filteredStations = filteredStations.sorted { $0.countryName! < $1.countryName! }
-
-        setupSearchBar()
+        self.dataSource = TableViewDataSource.init(cellIdentifier: R.reuseIdentifier.cell.identifier, items: self.filteredStations, configureCell: { (cell, viewModel) in
+            cell.textLabel?.text = "\(viewModel.countryName ?? "Unknown"), \(viewModel.countryCode ?? "Unknown"), \(viewModel.code ?? "Unknown")"
+        })
+        self.tableView.dataSource = self.dataSource
     }
 
     func setupSearchBar(){
@@ -37,36 +42,20 @@ class SearchControllerTableViewController: UITableViewController {
         searchController.searchBar.placeholder = "Search by Country or Code"
         searchController.dimsBackgroundDuringPresentation = false
         searchController.hidesNavigationBarDuringPresentation = false
-        searchController.isActive = true
-        searchController.searchBar.becomeFirstResponder()
+
         //TODO, fix the searching!!!
         self.tableView.tableHeaderView = searchController.searchBar
         searchController.searchBar.text = currentSearchText
         
     }
-    // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
+}
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return self.filteredStations.count
-    }
-
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        let station = self.filteredStations[indexPath.row]
-        cell.textLabel?.text = "\(station.countryName ?? "Unknown"), \(station.countryCode ?? "Unknown"), \(station.code ?? "Unknown")"
-        return cell
-    }
-    
+//#MARK: UITableViewDelegate
+extension SearchControllerTableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.searchController.searchBar.resignFirstResponder()
         self.searchController.isActive = false
-//        self.textField?.text = self.filteredStations[indexPath.row].code
         if textField?.tag == textFields.origin.rawValue {
             self.tripViewModel.origin.value = self.filteredStations[indexPath.row].code
         } else if textField?.tag == textFields.destination.rawValue {
@@ -74,7 +63,6 @@ class SearchControllerTableViewController: UITableViewController {
         }
         self.navigationController?.popViewController(animated: true)
     }
-
 }
 
 extension SearchControllerTableViewController: UISearchBarDelegate, UISearchResultsUpdating {
@@ -115,6 +103,7 @@ extension SearchControllerTableViewController: UISearchBarDelegate, UISearchResu
 
             return countryMatch != nil || codeMatch != nil ? true : false
         }
+        self.dataSource.items = self.filteredStations
         self.tableView.reloadData()
 
     }
